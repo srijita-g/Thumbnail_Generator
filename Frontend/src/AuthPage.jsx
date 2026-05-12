@@ -54,8 +54,14 @@ export default function AuthPage({ onLogin }) {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <h1>Thumbnail Builder</h1>
-        <p>Generate YouTube thumbnails with AI</p>
+
+        <h1>Thumbnaix AI</h1>
+
+        <p>
+          {isLogin
+            ? 'Welcome Back'
+            : 'Welcome to Thumbnaix AI'}
+        </p>
 
         <div className="auth-tabs">
           <button
@@ -100,6 +106,7 @@ export default function AuthPage({ onLogin }) {
               ? 'Login'
               : 'Register'}
         </button>
+
       </div>
     </div>
   )

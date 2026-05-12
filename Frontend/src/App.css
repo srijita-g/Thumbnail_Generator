@@ -347,6 +347,43 @@ textarea::placeholder,
   color: #f87171;
 }
 
+.auth-title {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+
+  background: linear-gradient(
+    135deg,
+    #c084fc 0%,
+    #ec4899 50%,
+    #8b5cf6 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: -2px;
+  line-height: 1;
+
+  margin-bottom: 10px;
+
+  text-shadow:
+    0 0 30px rgba(192,132,252,0.35);
+}
+
+.auth-subtitle {
+  color: #cbd5e1;
+
+  font-size: 1.05rem;
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  margin-bottom: 10px;
+
+  opacity: 0.95;
+}
+
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
