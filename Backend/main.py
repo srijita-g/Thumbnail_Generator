@@ -21,7 +21,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://thumbnail-generator-bnefmm4ld-srijita-gs-projects.vercel.app"
+        "https://thumbnail-generator-pi-eight.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
