@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { uploadHeadshot, createJob, subscribeToJob } from './api'
-import AuthPage from './authPage'
+import AuthPage from './AuthPage'
 import './App.css'
 
 function App() {
