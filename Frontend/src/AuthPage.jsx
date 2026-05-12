@@ -16,13 +16,22 @@ export default function AuthPage({ onLogin }) {
     setLoading(true)
     setError('')
 
-    const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register'
+    const BASE_URL = import.meta.env.VITE_API_URL
+
+    const endpoint = isLogin
+      ? `${BASE_URL}/api/auth/login`
+      : `${BASE_URL}/api/auth/register`
 
     try {
       const res = await fetch(endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email,
+          password
+        })
       })
 
       const data = await res.json()
@@ -55,6 +64,7 @@ export default function AuthPage({ onLogin }) {
           >
             Login
           </button>
+
           <button
             className={!isLogin ? 'active' : ''}
             onClick={() => setIsLogin(false)}
@@ -84,7 +94,11 @@ export default function AuthPage({ onLogin }) {
           onClick={handleSubmit}
           disabled={loading}
         >
-          {loading ? 'Please wait...' : isLogin ? 'Login' : 'Register'}
+          {loading
+            ? 'Please wait...'
+            : isLogin
+              ? 'Login'
+              : 'Register'}
         </button>
       </div>
     </div>
